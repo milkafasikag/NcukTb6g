@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head><script>{% load static %}</script><script>{% load custom_tags %}</script><script>var jsonDataww = {{ json_data|safe }};</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title id="title_1"></title>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<!-- Favicons -->
+<link href="{% static 'assets/img/favicon.png' %}" rel="icon"/>
+<link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon"/>
+<!-- Google Fonts -->
+<link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i' %}" rel="stylesheet"/>
+<!-- Vendor CSS Files -->
+<link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet"/>
+<link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet"/>
+<link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet"/>
+<link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet"/>
+<link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet"/>
+<link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet"/>
+<!-- Template Main CSS File -->
+<link href="{% static 'assets/css/style.css' %}" rel="stylesheet"/>
+<!-- =======================================================
+  * Template Name: Squadfree
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+<body>
+<!-- ======= Header ======= -->
+<header class="fixed-top header-transparent" id="header">
+<div class="container d-flex align-items-center justify-content-between position-relative">
+<div class="logo">
+<h1 class="text-light" id="h1_1"></h1>
+<!-- Uncomment below if you prefer to use an image logo -->
+<!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+</div>
+<nav class="navbar" id="navbar">
+<ul>
+<li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+<li><a class="nav-link scrollto" href="#about">About Us</a></li>
+<li><a class="nav-link scrollto" href="#services">Services</a></li>
+<li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
+<li><a class="nav-link scrollto" href="#team">Team</a></li>
+<li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+</ul>
+<i class="bi bi-list mobile-nav-toggle"></i>
+</nav><!-- .navbar -->
+</div>
+</header><!-- End Header -->
+<!-- ======= Hero Section ======= -->
+<section id="hero">
+<div class="hero-container" data-aos="fade-up">
+<h1 id="h1_2"></h1>
+<h2 id="h2_1"></h2>
+<a class="btn-get-started scrollto" href="#about"><i class="bx bx-chevrons-down"></i></a>
+</div>
+</section><!-- End Hero -->
+<main id="main">
+<!-- ======= About Section ======= -->
+<section class="about" id="about">
+<div class="container">
+<div class="row no-gutters">
+<div class="content col-xl-5 d-flex align-items-stretch" data-aos="fade-up">
+<div class="content">
+<h3 id="h3_1"></h3>
+<p id="p_1"></p>
+<a class="about-btn" href="#">About us <i class="bx bx-chevron-right"></i></a>
+</div>
+</div>
+<div class="col-xl-7 d-flex align-items-stretch">
+<div class="icon-boxes d-flex flex-column justify-content-center">
+<div class="row">
+<div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+<i class="bx bx-receipt"></i>
+<h4 id="h4_1"></h4>
+<p id="p_2"></p>
+</div>
+<div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+<i class="bx bx-cube-alt"></i>
+<h4 id="h4_2"></h4>
+<p id="p_3"></p>
+</div>
+<div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+<i class="bx bx-images"></i>
+<h4 id="h4_3"></h4>
+<p id="p_4"></p>
+</div>
+<div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+<i class="bx bx-shield"></i>
+<h4 id="h4_4"></h4>
+<p id="p_5"></p>
+</div>
+</div>
+</div><!-- End .content-->
+</div>
+</div>
+</div>
+</section><!-- End About Section -->
+<!-- ======= Services Section ======= -->
+<section class="services" id="services">
+<div class="container">
+<div class="section-title" data-aos="fade-in" data-aos-delay="100">
+<h2 id="h2_2"></h2>
+<p id="p_6"></p>
+</div>
+<div class="row">
+
+  {% for service in services %}
+
+<div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4 class="title"><a href="">  {{ service.title }}</a></h4>
+              <p class="description">  {{ service.description }}</p>
+            </div>
+          </div>
+
+          {% endfor %}
+</div>
+</div>
+</section><!-- End Services Section -->
+<!-- ======= Counts Section ======= -->
+<section class="counts section-bg" id="counts">
+<div class="container">
+<div class="row no-gutters">
+<div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+<div class="count-box">
+<i class="bi bi-emoji-smile"></i>
+<span class="purecounter" data-purecounter-duration="1" data-purecounter-end="232" data-purecounter-start="0"></span>
+<p id="p_7"></p>
+</div>
+</div>
+<div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+<div class="count-box">
+<i class="bi bi-journal-richtext"></i>
+<span class="purecounter" data-purecounter-duration="1" data-purecounter-end="521" data-purecounter-start="0"></span>
+<p id="p_8"></p>
+</div>
+</div>
+<div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+<div class="count-box">
+<i class="bi bi-headset"></i>
+<span class="purecounter" data-purecounter-duration="1" data-purecounter-end="1463" data-purecounter-start="0"></span>
+<p id="p_9"></p>
+</div>
+</div>
+<div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+<div class="count-box">
+<i class="bi bi-people"></i>
+<span class="purecounter" data-purecounter-duration="1" data-purecounter-end="15" data-purecounter-start="0"></span>
+<p id="p_10"></p>
+</div>
+</div>
+</div>
+</div>
+</section><!-- End Counts Section -->
+<!-- ======= Cta Section ======= -->
+<section class="cta" id="cta">
+<div class="container" data-aos="zoom-in">
+<div class="text-center">
+<h3 id="h3_2"></h3>
+<p id="p_11"></p>
+<a class="cta-btn" href="#">Call To Action</a>
+</div>
+</div>
+</section><!-- End Cta Section -->
+<!-- ======= Portfolio Section ======= -->
+<section class="portfolio" id="portfolio">
+<div class="container">
+<div class="section-title" data-aos="fade-in" data-aos-delay="100">
+<h2 id="h2_3"></h2>
+<p id="p_12"></p>
+</div>
+<div class="row" data-aos="fade-in">
+<div class="col-lg-12 d-flex justify-content-center">
+<ul id="portfolio-flters">
+<li class="filter-active" data-filter="*">All</li>
+<li data-filter=".filter-app">App</li>
+<li data-filter=".filter-card">Card</li>
+<li data-filter=".filter-web">Web</li>
+</ul>
+</div>
+</div>
+<div class="row portfolio-container" data-aos="fade-up">
+
+  {% for image in image %}
+<div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+
+              <img src="{{ image.url }}" class="img-fluid" alt="{{ image.description }}">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+
+          {% endfor %}
+</div>
+</div>
+</section><!-- End Portfolio Section -->
+<!-- ======= Testimonials Section ======= -->
+<section class="testimonials section-bg" id="testimonials">
+<div class="container">
+<div class="section-title" data-aos="fade-in" data-aos-delay="100">
+<h2 id="h2_4"></h2>
+<p id="p_13"></p>
+</div>
+<div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+  {% for i in testmon %}
+<div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  {{i.description}}
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="{{i.image.url}}" class="testimonial-img" alt="">
+                <h3>- {{i.name}}</h3>
+                <h4>Ceo &amp; Founder</h4>
+              </div>
+            </div>
+            
+
+             {% endfor %}  
+<!-- End testimonial item -->
+</div>
+<div class="swiper-pagination"></div>
+</div>
+</div>
+</div></section><!-- End Testimonials Section -->
+<!-- ======= Team Section ======= -->
+<section class="team" id="team">
+<div class="container">
+<div class="section-title" data-aos="fade-in" data-aos-delay="100">
+<h2 id="h2_5"></h2>
+<p id="p_14"></p>
+</div>
+<div class="row">
+  {% for worker in worke %}
+<div class="col-lg-4 col-md-6">
+            <div class="member" data-aos="fade-up">
+              <div class="pic"><img src="{{worker.image.url}}" class="img-fluid" alt="{{worker.name}}"></div>
+              <div class="member-info">
+                <h4>{{worker.name}}</h4>
+                <span> {{worker.postion}}</span>
+                <div class="social">
+                  {% for social in worker.socilamedia_worker.all %}
+                  {{social.social_media.name}}
+                  <a href="{{social.link}}"></a>
+              {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+</div>
+</div>
+</section><!-- End Team Section -->
+<!-- ======= Contact Section ======= -->
+<section class="contact section-bg" id="contact">
+<div class="container" data-aos="fade-up">
+<div class="section-title">
+<h2 id="h2_6"></h2>
+<p id="p_15"></p>
+</div>
+<div class="row">
+<div class="col-lg-6">
+<div class="info-box mb-4">
+<i class="bx bx-map"></i>
+<h3 id="h3_3"></h3>
+<p id="p_16"></p>
+</div>
+</div>
+<div class="col-lg-3 col-md-6">
+<div class="info-box mb-4">
+<i class="bx bx-envelope"></i>
+<h3 id="h3_4"></h3>
+<p id="p_17"></p>
+</div>
+</div>
+<div class="col-lg-3 col-md-6">
+<div class="info-box mb-4">
+<i class="bx bx-phone-call"></i>
+<h3 id="h3_5"></h3>
+<p id="p_18"></p>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-6">
+<iframe allowfullscreen="" class="mb-4 mb-lg-0" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" style="border:0; width: 100%; height: 384px;"></iframe>
+</div>
+<div class="col-lg-6">
+  <form action="{% url 'web:create_message' %}" method="post" role="form" class="php-email-form" >
+    {% csrf_token %}
+            <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+</div>
+</div>
+</div>
+</section><!-- End Contact Section -->
+</main><!-- End #main -->
+<!-- ======= Footer ======= -->
+<footer id="footer">
+<div class="footer-top">
+<div class="container">
+<div class="row">
+<div class="col-lg-4 col-md-6">
+<div class="footer-info">
+<h3 id="h3_6"></h3>
+<p class="pb-3" id="p_19"></p>
+<p id="p_20"></p>
+<div class="social-links mt-3">
+
+  {% for socilamedia in social %}
+  {% if socilamedia.social_media.name == "Facebook" %}
+  <a href="{{socilamedia.link}}"><i class="fab fa-facebook"></i></a>
+  {% elif socilamedia.social_media.name == "Instagram" %}
+  <a href="{{socilamedia.link}}"> <i class="fab fa-instagram"></i></a>
+  {% elif socilamedia.social_media.name == "Twitter" %}
+  <a href="{{socilamedia.link}}"> <i class="fab fa-twitter"></i></a>
+  {% elif socilamedia.social_media.name == "LinkedIn" %}
+  <a href="{{socilamedia.link}}"> <i class="fab fa-linkedin"></i></a>
+  {% elif socilamedia.social_media.name == "Snapchat" %}
+  <a href="{{socilamedia.link}}"> <i class="fab fa-snapchat"></i></a>
+  {% elif socilamedia.social_media.name == "Pinterest" %}
+  <a href="{{socilamedia.link}}"> <i class="fab fa-pinterest"></i></a>
+  {% elif socilamedia.social_media.name == "Reddit" %}
+  <a href="{{socilamedia.link}}"> <i class="fab fa-reddit"></i></a>
+  {% elif socilamedia.social_media.name == "TikTok" %}
+  <a href="{{socilamedia.link}}"> <i class="fab fa-tiktok"></i></a>
+  {% elif socilamedia.social_media.name == "YouTube" %}
+  <a href="{{socilamedia.link}}"> <i class="fab fa-youtube"></i></a>
+  {% elif socilamedia.social_media.name == "WhatsApp" %}
+  <a href="{{socilamedia.link}}"> <i class="fab fa-whatsapp"></i></a>
+  {% elif socilamedia.social_media.name == "WeChat" %}
+  <a href="{{socilamedia.link}}"> <i class="fab fa-weixin"></i></a>
+  {% elif socilamedia.social_media.name == "Tumblr" %}
+  <a href="{{socilamedia.link}}"> <i class="fab fa-tumblr"></i></a>
+  {% elif socilamedia.social_media.name == "Twitch" %}
+  <a href="{{socilamedia.link}}"><i class="fab fa-twitch"></i></a>
+  {% elif socilamedia.social_media.name == "Telegram" %}
+  <a href="{{socilamedia.link}}"> <i class="fab fa-telegram"></i></a>
+  {% elif socilamedia.social_media.name == "Discord" %}
+  <a href="{{socilamedia.link}}"> <i class="fab fa-discord"></i></a>
+  {% elif socilamedia.social_media.name == "Clubhouse" %}
+  <a href="{{socilamedia.link}}"> <i class="fab fa-houzz"></i></a>
+  {% elif socilamedia.social_media.name == "Viber" %}
+  <a href="{{socilamedia.link}}"> <i class="fab fa-viber"></i></a>
+  {% elif socilamedia.social_media.name == "LINE" %}
+  <a href="{{socilamedia.link}}"> <i class="fab fa-line"></i></a>
+  {% elif socilamedia.social_media.name == "QQ" %}
+  <a href="{{socilamedia.link}}"> <i class="fab fa-qq"></i></a>
+  {% elif socilamedia.social_media.name == "Sina Weibo" %}
+  <a href="{{socilamedia.link}}"> <i class="fab fa-weibo"></i></a>
+  {% endif %}
+{% endfor %}
+</div>
+</div>
+</div>
+<div class="col-lg-2 col-md-6 footer-links">
+<h4 id="h4_5"></h4>
+<ul>
+<li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+<li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+<li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+<li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+<li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+</ul>
+</div>
+<div class="col-lg-2 col-md-6 footer-links">
+<h4 id="h4_6"></h4>
+<ul>
+<li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+<li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+<li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+<li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+<li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+</ul>
+</div>
+<div class="col-lg-4 col-md-6 footer-newsletter">
+<h4 id="h4_7"></h4>
+<p id="p_21"></p>
+
+<form method="post" action="{% url 'web:collect_email' %}">
+  {% csrf_token %}
+    <input type="email" name="email"><input type="submit" value="Subscribe">
+  </form> 
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="copyright">
+        © Copyright <strong><span>zufan.et</span></strong>. All Rights Reserved
+      </div>
+<div class="credits">
+<!-- All the links in the footer should remain intact. -->
+<!-- You can delete the links only if you purchased the pro version. -->
+<!-- Licensing information: https://bootstrapmade.com/license/ -->
+<!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/ -->
+        Designed by <a href="https://zufan.et">zufan.et</a>
+</div>
+</div>
+</footer><!-- End Footer -->
+<a class="back-to-top d-flex align-items-center justify-content-center" href="#"><i class="bi bi-arrow-up-short"></i></a>
+<!-- Vendor JS Files -->
+<script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+<script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+<script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+<script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+<!-- Template Main JS File -->
+<script src="{% static 'assets/js/main.js' %}"></script>
+<script src="{% static 'webfunction.js' %}"></script><script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Iterate over each key in the JSON data
+        for (var key in jsonDataww) {
+            if (jsonDataww.hasOwnProperty(key)) {
+                var element = document.getElementById(key);
+                if (element) {
+                    if(key.startsWith("a")){
+                        element.href = jsonDataww[key['link']];
+                    }else{
+                        element.textContent = jsonDataww[key];
+                    }
+                }
+            }
+        }
+    });
+    </script></body>
+</html>
